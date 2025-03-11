@@ -14,7 +14,7 @@ function makeCalculator() {
       if (b !== 0) {
         return a / b;
       } else {
-        throw new Error('Деление на ноль невозможно');
+        throw new Error('Division by zero is impossible');
       }
     },
     reset: function () {
@@ -22,8 +22,8 @@ function makeCalculator() {
 
       return this;
     },
-    operate: function (callbeck, num1) {
-      this.result = callbeck(this.result, num1);
+    operate: function (callback, num1) {
+      this.result = callback(this.result, num1);
 
       return this;
     },
